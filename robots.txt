@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dewwjq.github.io/decision-clarity-kit/sitemap.xml
