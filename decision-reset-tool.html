@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free Decision Reset Tool</title>
+    <meta name="description" content="A free browser-only decision reset tool for turning a hard choice into facts, options, risks, one next action, and a review date.">
+    <link rel="canonical" href="https://dewwjq.github.io/decision-clarity-kit/decision-reset-tool.html">
+    <link rel="alternate" hreflang="en" href="https://dewwjq.github.io/decision-clarity-kit/decision-reset-tool.html">
+    <link rel="alternate" hreflang="zh-Hans" href="https://dewwjq.github.io/decision-clarity-kit/zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://dewwjq.github.io/decision-clarity-kit/decision-reset-tool.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Free Decision Reset Tool">
+    <meta property="og:description" content="Write the decision, compare options, name the risk, and export a Markdown record.">
+    <meta property="og:url" content="https://dewwjq.github.io/decision-clarity-kit/decision-reset-tool.html">
+    <meta property="og:image" content="https://dewwjq.github.io/decision-clarity-kit/assets/04-bonus-tracker.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Decision Reset Tool">
+    <meta name="twitter:description" content="Write the decision, compare options, name the risk, and export a Markdown record.">
+    <meta name="twitter:image" content="https://dewwjq.github.io/decision-clarity-kit/assets/04-bonus-tracker.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free Decision Reset Tool","applicationCategory":"ProductivityApplication","operatingSystem":"Any modern browser","description":"A browser-only decision reset tool for generating a local Markdown decision record.","url":"https://dewwjq.github.io/decision-clarity-kit/decision-reset-tool.html","image":"https://dewwjq.github.io/decision-clarity-kit/assets/04-bonus-tracker.png","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+    <link rel="stylesheet" href="styles.css?v=5">
+  </head>
+  <body class="tool-page">
+    <main>
+      <section class="tool-shell">
+        <header class="tool-header">
+          <div>
+            <p class="eyebrow">Free browser tool</p>
+            <h1>Decision Reset Tool</h1>
+          </div>
+          <nav class="tool-nav" aria-label="Tool links">
+            <a href="index.html">Kit</a>
+            <a href="launch-kit.html">Launch kit</a>
+            <a href="https://github.com/dewwjq/decision-clarity-kit/issues/new?template=purchase_request.yml">Request checkout</a>
+          </nav>
+        </header>
+
+        <div class="tool-grid">
+          <form class="decision-form" id="decision-form">
+            <label>
+              Decision
+              <input id="decision" name="decision" type="text" placeholder="Should I take this project?" autocomplete="off">
+            </label>
+
+            <label>
+              Known facts
+              <textarea id="facts" name="facts" rows="4" placeholder="What is already true?"></textarea>
+            </label>
+
+            <label>
+              Important unknowns
+              <textarea id="unknowns" name="unknowns" rows="3" placeholder="What could change the decision?"></textarea>
+            </label>
+
+            <fieldset>
+              <legend>Options</legend>
+              <div class="option-row">
+                <input id="option-a" type="text" placeholder="Option A">
+                <input id="score-a" type="number" min="1" max="5" value="3" aria-label="Option A score">
+              </div>
+              <div class="option-row">
+                <input id="option-b" type="text" placeholder="Option B">
+                <input id="score-b" type="number" min="1" max="5" value="3" aria-label="Option B score">
+              </div>
+              <div class="option-row">
+                <input id="option-c" type="text" placeholder="Option C">
+                <input id="score-c" type="number" min="1" max="5" value="3" aria-label="Option C score">
+              </div>
+            </fieldset>
+
+            <label>
+              Main risk
+              <textarea id="risk" name="risk" rows="3" placeholder="What would make this fail?"></textarea>
+            </label>
+
+            <label>
+              Prevention action
+              <input id="prevention" name="prevention" type="text" placeholder="What can reduce the risk now?">
+            </label>
+
+            <label>
+              Next action
+              <input id="next-action" name="next-action" type="text" placeholder="What is the smallest next move?">
+            </label>
+
+            <label>
+              Review date
+              <input id="review-date" name="review-date" type="date">
+            </label>
+
+            <div class="tool-actions">
+              <button type="button" id="copy-markdown">Copy Markdown</button>
+              <button type="button" id="download-markdown">Download .md</button>
+              <button type="reset">Reset</button>
+            </div>
+          </form>
+
+          <aside class="tool-output">
+            <div class="output-header">
+              <h2>Decision record</h2>
+              <span id="status">Local only</span>
+            </div>
+            <pre id="markdown-output" aria-live="polite"></pre>
+            <div class="upgrade-strip">
+              <img src="assets/05-filled-examples.png" alt="Filled decision example preview">
+              <div>
+                <h2>Need the full workflow?</h2>
+                <p>The full kit adds printable workbooks, Markdown templates, filled examples, and a local tracker.</p>
+                <a class="button primary" href="https://github.com/dewwjq/decision-clarity-kit/issues/new?template=purchase_request.yml">Request $9 checkout</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const ids = [
+        "decision", "facts", "unknowns", "option-a", "score-a", "option-b", "score-b",
+        "option-c", "score-c", "risk", "prevention", "next-action", "review-date"
+      ];
+      const output = document.querySelector("#markdown-output");
+      const status = document.querySelector("#status");
+      const form = document.querySelector("#decision-form");
+
+      function value(id) {
+        return document.querySelector("#" + id).value.trim();
+      }
+
+      function bulletLines(text) {
+        return text.split("\n").map((line) => line.trim()).filter(Boolean).map((line) => `- ${line}`).join("\n") || "- ";
+      }
+
+      function optionsMarkdown() {
+        return [["option-a", "score-a"], ["option-b", "score-b"], ["option-c", "score-c"]]
+          .map(([optionId, scoreId]) => ({ name: value(optionId), score: value(scoreId) }))
+          .filter((item) => item.name)
+          .map((item) => `- ${item.name} - confidence ${item.score}/5`)
+          .join("\n") || "- ";
+      }
+
+      function markdown() {
+        const today = new Date().toISOString().slice(0, 10);
+        return `# Decision Record\n\nDate: ${today}\n\n## Decision\n\n${value("decision") || ""}\n\n## Known Facts\n\n${bulletLines(value("facts"))}\n\n## Important Unknowns\n\n${bulletLines(value("unknowns"))}\n\n## Options\n\n${optionsMarkdown()}\n\n## Main Risk\n\n${value("risk") || ""}\n\n## Prevention Action\n\n${value("prevention") || ""}\n\n## Next Action\n\n${value("next-action") || ""}\n\n## Review Date\n\n${value("review-date") || ""}\n`;
+      }
+
+      function render() {
+        output.textContent = markdown();
+      }
+
+      ids.forEach((id) => document.querySelector("#" + id).addEventListener("input", render));
+      form.addEventListener("reset", () => setTimeout(render, 0));
+
+      document.querySelector("#copy-markdown").addEventListener("click", async () => {
+        await navigator.clipboard.writeText(markdown());
+        status.textContent = "Copied";
+        setTimeout(() => status.textContent = "Local only", 1600);
+      });
+
+      document.querySelector("#download-markdown").addEventListener("click", () => {
+        const blob = new Blob([markdown()], { type: "text/markdown" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "decision-record.md";
+        link.click();
+        URL.revokeObjectURL(url);
+      });
+
+      render();
+    </script>
+  </body>
+</html>
