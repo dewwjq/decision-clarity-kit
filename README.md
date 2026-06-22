@@ -14,6 +14,8 @@ Buy page: https://dewwjq.github.io/decision-clarity-kit/buy.html
 
 Public launch issue: https://github.com/dewwjq/decision-clarity-kit/issues/1
 
+Filled example: https://dewwjq.github.io/decision-clarity-kit/examples/filled-decision-example.html
+
 AI/LLM summary: https://dewwjq.github.io/decision-clarity-kit/llms.txt
 
 Full AI/LLM reference: https://dewwjq.github.io/decision-clarity-kit/llms-full.txt

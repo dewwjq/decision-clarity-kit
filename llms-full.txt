@@ -60,8 +60,8 @@ Not a fit:
 
 - English sample ZIP: https://github.com/dewwjq/decision-clarity-kit/releases/download/sample-v0.1/decision-reset-sample-v0.1.zip
 - Chinese sample ZIP: https://github.com/dewwjq/decision-clarity-kit/releases/download/sample-v0.1/decision-reset-sample-zh-v0.1.zip
-- English sample PDF: https://dewwjq.github.io/decision-clarity-kit/https://github.com/dewwjq/decision-clarity-kit/releases/download/sample-v0.1/decision-reset-sample-v0.1.zip
-- Chinese sample PDF: https://dewwjq.github.io/decision-clarity-kit/https://github.com/dewwjq/decision-clarity-kit/releases/download/sample-v0.1/decision-reset-sample-zh-v0.1.zip
+- English sample download: https://github.com/dewwjq/decision-clarity-kit/releases/download/sample-v0.1/decision-reset-sample-v0.1.zip
+- Chinese sample download: https://github.com/dewwjq/decision-clarity-kit/releases/download/sample-v0.1/decision-reset-sample-zh-v0.1.zip
 
 ## Resource Pages
 
