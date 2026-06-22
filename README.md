@@ -6,6 +6,10 @@ Live site: https://dewwjq.github.io/decision-clarity-kit/
 
 Chinese page: https://dewwjq.github.io/decision-clarity-kit/zh.html
 
+Launch/share kit: https://dewwjq.github.io/decision-clarity-kit/launch-kit.html
+
+Purchase request form: https://github.com/dewwjq/decision-clarity-kit/issues/new?template=purchase_request.yml
+
 ## Free Samples
 
 Download the free one-page samples:
@@ -48,6 +52,15 @@ The full kit is in prelaunch. It is prepared as a digital download with:
 - Chinese decision journal template: https://dewwjq.github.io/decision-clarity-kit/resources/decision-journal-template-zh.html
 - Chinese premortem template: https://dewwjq.github.io/decision-clarity-kit/resources/premortem-template-zh.html
 - Chinese decision review template: https://dewwjq.github.io/decision-clarity-kit/resources/decision-review-zh.html
+
+## Public Metrics
+
+Daily public metrics are tracked in `metrics/daily.csv`:
+
+- English sample downloads
+- Chinese sample downloads
+- early-access issues
+- purchase-intent issues
 
 ## Boundary
 
