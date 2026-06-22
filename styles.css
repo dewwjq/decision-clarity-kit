@@ -236,6 +236,27 @@ h2 {
   text-align: center;
 }
 
+.waitlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.waitlist p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.waitlist .button {
+  flex: 0 0 auto;
+}
+
 .final-cta p {
   max-width: 680px;
   margin-left: auto;
@@ -321,8 +342,17 @@ h2 {
 
   .check-list li,
   .split p,
-  .final-cta p {
+  .final-cta p,
+  .waitlist p {
     overflow-wrap: break-word;
+  }
+
+  .waitlist {
+    display: block;
+  }
+
+  .waitlist .button {
+    margin-top: 22px;
   }
 
   .section-inner {

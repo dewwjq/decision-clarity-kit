@@ -1,0 +1,45 @@
+name: Early access request
+description: Join the Decision Clarity Kit early access list.
+title: "Early access: "
+labels: ["early-access", "lead"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form if you want the full Decision Clarity Kit when checkout opens. Do not include private, financial, medical, legal, or sensitive personal information.
+  - type: input
+    id: use_case
+    attributes:
+      label: What decision are you trying to make clearer?
+      description: One short sentence is enough.
+      placeholder: "Example: choosing between two project directions"
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Preferred format
+      options:
+        - PDF workbook
+        - Markdown templates
+        - Local tracker
+        - All of the above
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Preferred language
+      options:
+        - English
+        - Chinese
+        - Both
+    validations:
+      required: true
+  - type: checkboxes
+    id: intent
+    attributes:
+      label: Purchase intent
+      options:
+        - label: I want to be notified when the $9 full kit is available.
+          required: true
