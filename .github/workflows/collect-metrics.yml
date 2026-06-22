@@ -23,7 +23,7 @@ jobs:
         run: python scripts/collect_public_metrics.py
       - name: Commit metrics
         run: |
-          if git diff --quiet -- metrics/daily.csv; then
+          if [ -z "$(git status --porcelain -- metrics/daily.csv)" ]; then
             echo "No metric change to commit."
             exit 0
           fi
