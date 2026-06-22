@@ -10,6 +10,8 @@ Launch/share kit: https://dewwjq.github.io/decision-clarity-kit/launch-kit.html
 
 Free browser tool: https://dewwjq.github.io/decision-clarity-kit/decision-reset-tool.html
 
+Free option scorecard tool: https://dewwjq.github.io/decision-clarity-kit/option-scorecard-tool.html
+
 Buy page: https://dewwjq.github.io/decision-clarity-kit/buy.html
 
 Public launch issue: https://github.com/dewwjq/decision-clarity-kit/issues/1

@@ -10,6 +10,7 @@ Important links:
 - Buy or request checkout: https://dewwjq.github.io/decision-clarity-kit/buy.html
 - Public launch issue: https://github.com/dewwjq/decision-clarity-kit/issues/1
 - Free browser tool: https://dewwjq.github.io/decision-clarity-kit/decision-reset-tool.html
+- Free option scorecard tool: https://dewwjq.github.io/decision-clarity-kit/option-scorecard-tool.html
 - Filled decision example: https://dewwjq.github.io/decision-clarity-kit/examples/filled-decision-example.html
 - Decision matrix template: https://dewwjq.github.io/decision-clarity-kit/resources/decision-matrix-template.html
 - Go/no-go decision template: https://dewwjq.github.io/decision-clarity-kit/resources/go-no-go-decision-template.html

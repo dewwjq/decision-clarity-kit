@@ -364,6 +364,50 @@ h2 {
   gap: 10px;
 }
 
+.scorecard-criteria {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.scorecard-criteria label,
+.scorecard-options label {
+  min-width: 0;
+}
+
+.scorecard-options {
+  display: grid;
+  gap: 14px;
+}
+
+.scorecard-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) repeat(4, minmax(58px, 0.35fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.scorecard-row label {
+  font-size: 0.84rem;
+}
+
+.scorecard-result {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 18px;
+}
+
+.scorecard-result h2 {
+  margin-bottom: 10px;
+}
+
+.scorecard-result p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .tool-actions {
   display: flex;
   flex-wrap: wrap;
@@ -719,6 +763,8 @@ h2 {
   .buy-grid,
   .step-grid,
   .proof-links,
+  .scorecard-criteria,
+  .scorecard-row,
   .price-panel {
     grid-template-columns: 1fr;
     max-width: 300px;

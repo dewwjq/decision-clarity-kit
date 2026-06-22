@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free Option Scorecard Tool</title>
+    <meta name="description" content="A free browser-only option scorecard tool for comparing decision options by impact, effort, risk, reversibility, and confidence.">
+    <link rel="canonical" href="https://dewwjq.github.io/decision-clarity-kit/option-scorecard-tool.html">
+    <link rel="alternate" hreflang="en" href="https://dewwjq.github.io/decision-clarity-kit/option-scorecard-tool.html">
+    <link rel="alternate" hreflang="x-default" href="https://dewwjq.github.io/decision-clarity-kit/option-scorecard-tool.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Free Option Scorecard Tool">
+    <meta property="og:description" content="Compare options, calculate weighted scores, and export a Markdown decision scorecard.">
+    <meta property="og:url" content="https://dewwjq.github.io/decision-clarity-kit/option-scorecard-tool.html">
+    <meta property="og:image" content="https://dewwjq.github.io/decision-clarity-kit/assets/05-filled-examples.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Option Scorecard Tool">
+    <meta name="twitter:description" content="Compare options, calculate weighted scores, and export a Markdown decision scorecard.">
+    <meta name="twitter:image" content="https://dewwjq.github.io/decision-clarity-kit/assets/05-filled-examples.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free Option Scorecard Tool","applicationCategory":"ProductivityApplication","operatingSystem":"Any modern browser","description":"A browser-only option scorecard tool for comparing decision options and exporting a Markdown scorecard.","url":"https://dewwjq.github.io/decision-clarity-kit/option-scorecard-tool.html","image":"https://dewwjq.github.io/decision-clarity-kit/assets/05-filled-examples.png","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+    <link rel="stylesheet" href="styles.css?v=8">
+  </head>
+  <body class="tool-page">
+    <main>
+      <section class="tool-shell">
+        <header class="tool-header">
+          <div>
+            <p class="eyebrow">Free browser tool</p>
+            <h1>Option Scorecard Tool</h1>
+          </div>
+          <nav class="tool-nav" aria-label="Tool links">
+            <a href="index.html">Kit</a>
+            <a href="decision-reset-tool.html">Reset tool</a>
+            <a href="buy.html">Buy</a>
+          </nav>
+        </header>
+
+        <div class="tool-grid">
+          <form class="decision-form" id="scorecard-form">
+            <label>
+              Decision
+              <input id="decision" name="decision" type="text" placeholder="Which option should we choose?" autocomplete="off">
+            </label>
+
+            <fieldset>
+              <legend>Criteria weights</legend>
+              <div class="scorecard-criteria">
+                <label>
+                  Impact
+                  <input id="weight-impact" type="number" min="0" max="5" value="3">
+                </label>
+                <label>
+                  Effort
+                  <input id="weight-effort" type="number" min="0" max="5" value="2">
+                </label>
+                <label>
+                  Risk
+                  <input id="weight-risk" type="number" min="0" max="5" value="2">
+                </label>
+                <label>
+                  Reversibility
+                  <input id="weight-reversible" type="number" min="0" max="5" value="1">
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Options</legend>
+              <div class="scorecard-options">
+                <div class="scorecard-row">
+                  <label>
+                    Option A
+                    <input id="option-a" type="text" placeholder="Option A">
+                  </label>
+                  <label>
+                    Impact
+                    <input id="impact-a" type="number" min="1" max="5" value="3">
+                  </label>
+                  <label>
+                    Effort
+                    <input id="effort-a" type="number" min="1" max="5" value="3">
+                  </label>
+                  <label>
+                    Risk
+                    <input id="risk-a" type="number" min="1" max="5" value="3">
+                  </label>
+                  <label>
+                    Reverse
+                    <input id="reversible-a" type="number" min="1" max="5" value="3">
+                  </label>
+                </div>
+                <div class="scorecard-row">
+                  <label>
+                    Option B
+                    <input id="option-b" type="text" placeholder="Option B">
+                  </label>
+                  <label>
+                    Impact
+                    <input id="impact-b" type="number" min="1" max="5" value="3">
+                  </label>
+                  <label>
+                    Effort
+                    <input id="effort-b" type="number" min="1" max="5" value="3">
+                  </label>
+                  <label>
+                    Risk
+                    <input id="risk-b" type="number" min="1" max="5" value="3">
+                  </label>
+                  <label>
+                    Reverse
+                    <input id="reversible-b" type="number" min="1" max="5" value="3">
+                  </label>
+                </div>
+                <div class="scorecard-row">
+                  <label>
+                    Option C
+                    <input id="option-c" type="text" placeholder="Option C">
+                  </label>
+                  <label>
+                    Impact
+                    <input id="impact-c" type="number" min="1" max="5" value="3">
+                  </label>
+                  <label>
+                    Effort
+                    <input id="effort-c" type="number" min="1" max="5" value="3">
+                  </label>
+                  <label>
+                    Risk
+                    <input id="risk-c" type="number" min="1" max="5" value="3">
+                  </label>
+                  <label>
+                    Reverse
+                    <input id="reversible-c" type="number" min="1" max="5" value="3">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <label>
+              Notes or assumptions
+              <textarea id="notes" rows="4" placeholder="What should future-you know about these scores?"></textarea>
+            </label>
+
+            <label>
+              Review date
+              <input id="review-date" type="date">
+            </label>
+
+            <div class="tool-actions">
+              <button type="button" id="load-example">Load Example</button>
+              <button type="button" id="copy-markdown">Copy Markdown</button>
+              <button type="button" id="download-markdown">Download .md</button>
+              <button type="reset">Reset</button>
+            </div>
+          </form>
+
+          <aside class="tool-output">
+            <div class="output-header">
+              <h2>Scorecard</h2>
+              <span id="status">Local only</span>
+            </div>
+            <div class="scorecard-result">
+              <h2 id="winner">Add options to compare</h2>
+              <p id="result-note">Scores update locally in your browser.</p>
+            </div>
+            <pre id="markdown-output" aria-live="polite"></pre>
+            <div class="upgrade-strip">
+              <img src="assets/05-filled-examples.png" alt="Filled decision scorecard preview">
+              <div>
+                <h2>Need the full workflow?</h2>
+                <p>The full kit adds printable scorecards, premortem pages, Markdown templates, filled examples, and a local tracker.</p>
+                <a class="button primary" href="buy.html">Request $9 checkout</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const suffixes = ["a", "b", "c"];
+      const scoreFields = ["impact", "effort", "risk", "reversible"];
+      const ids = [
+        "decision", "weight-impact", "weight-effort", "weight-risk", "weight-reversible",
+        "option-a", "impact-a", "effort-a", "risk-a", "reversible-a",
+        "option-b", "impact-b", "effort-b", "risk-b", "reversible-b",
+        "option-c", "impact-c", "effort-c", "risk-c", "reversible-c",
+        "notes", "review-date"
+      ];
+      const output = document.querySelector("#markdown-output");
+      const status = document.querySelector("#status");
+      const winner = document.querySelector("#winner");
+      const resultNote = document.querySelector("#result-note");
+      const form = document.querySelector("#scorecard-form");
+
+      function el(id) {
+        return document.querySelector("#" + id);
+      }
+
+      function text(id) {
+        return el(id).value.trim();
+      }
+
+      function number(id) {
+        return Number(el(id).value || 0);
+      }
+
+      function weights() {
+        return {
+          impact: number("weight-impact"),
+          effort: number("weight-effort"),
+          risk: number("weight-risk"),
+          reversible: number("weight-reversible")
+        };
+      }
+
+      function optionRows() {
+        const w = weights();
+        return suffixes.map((suffix) => {
+          const name = text("option-" + suffix);
+          const impact = number("impact-" + suffix);
+          const effort = number("effort-" + suffix);
+          const risk = number("risk-" + suffix);
+          const reversible = number("reversible-" + suffix);
+          const score = impact * w.impact - effort * w.effort - risk * w.risk + reversible * w.reversible;
+          return { suffix, name, impact, effort, risk, reversible, score };
+        }).filter((row) => row.name);
+      }
+
+      function leadingOption(rows) {
+        return rows.slice().sort((a, b) => b.score - a.score)[0] || null;
+      }
+
+      function tableMarkdown(rows) {
+        const lines = [
+          "| Option | Impact | Effort | Risk | Reversible | Weighted score |",
+          "| --- | ---: | ---: | ---: | ---: | ---: |"
+        ];
+        rows.forEach((row) => {
+          lines.push(`| ${row.name} | ${row.impact} | ${row.effort} | ${row.risk} | ${row.reversible} | ${row.score} |`);
+        });
+        return lines.join("\n");
+      }
+
+      function sourceMarkdown() {
+        return [
+          "## Source",
+          "",
+          "Created with the free Option Scorecard Tool: https://dewwjq.github.io/decision-clarity-kit/option-scorecard-tool.html",
+          "",
+          "Full Decision Clarity Kit: https://dewwjq.github.io/decision-clarity-kit/buy.html"
+        ].join("\n");
+      }
+
+      function markdown() {
+        const rows = optionRows();
+        const lead = leadingOption(rows);
+        const today = new Date().toISOString().slice(0, 10);
+        return `# Option Scorecard\n\nDate: ${today}\n\n## Decision\n\n${text("decision") || ""}\n\n## Weights\n\n- Impact: ${number("weight-impact")}\n- Effort: ${number("weight-effort")}\n- Risk: ${number("weight-risk")}\n- Reversibility: ${number("weight-reversible")}\n\n## Scores\n\n${rows.length ? tableMarkdown(rows) : "- "}\n\n## Leading Option\n\n${lead ? `${lead.name} (${lead.score})` : ""}\n\n## Notes\n\n${text("notes") || ""}\n\n## Review Date\n\n${text("review-date") || ""}\n\n${sourceMarkdown()}\n`;
+      }
+
+      function render() {
+        const rows = optionRows();
+        const lead = leadingOption(rows);
+        if (lead) {
+          winner.textContent = `Leading option: ${lead.name}`;
+          resultNote.textContent = `Weighted score: ${lead.score}. Use this as a prompt for judgment, not as an automatic answer.`;
+        } else {
+          winner.textContent = "Add options to compare";
+          resultNote.textContent = "Scores update locally in your browser.";
+        }
+        output.textContent = markdown();
+      }
+
+      function setValue(id, value) {
+        el(id).value = value;
+      }
+
+      ids.forEach((id) => el(id).addEventListener("input", render));
+      form.addEventListener("reset", () => setTimeout(render, 0));
+
+      document.querySelector("#load-example").addEventListener("click", () => {
+        const reviewDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+        setValue("decision", "Which launch path should we test next?");
+        setValue("weight-impact", "3");
+        setValue("weight-effort", "2");
+        setValue("weight-risk", "2");
+        setValue("weight-reversible", "1");
+        setValue("option-a", "Add another free tool");
+        setValue("impact-a", "4");
+        setValue("effort-a", "3");
+        setValue("risk-a", "2");
+        setValue("reversible-a", "5");
+        setValue("option-b", "Wait for paid checkout");
+        setValue("impact-b", "3");
+        setValue("effort-b", "1");
+        setValue("risk-b", "4");
+        setValue("reversible-b", "4");
+        setValue("option-c", "Write more resource pages");
+        setValue("impact-c", "3");
+        setValue("effort-c", "2");
+        setValue("risk-c", "2");
+        setValue("reversible-c", "5");
+        setValue("notes", "Scores are directional. The next action should still be small and reviewable.");
+        setValue("review-date", reviewDate);
+        render();
+      });
+
+      document.querySelector("#copy-markdown").addEventListener("click", async () => {
+        await navigator.clipboard.writeText(markdown());
+        status.textContent = "Copied";
+        setTimeout(() => status.textContent = "Local only", 1600);
+      });
+
+      document.querySelector("#download-markdown").addEventListener("click", () => {
+        const blob = new Blob([markdown()], { type: "text/markdown" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "option-scorecard.md";
+        link.click();
+        URL.revokeObjectURL(url);
+      });
+
+      render();
+    </script>
+  </body>
+</html>
