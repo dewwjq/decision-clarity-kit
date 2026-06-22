@@ -18,6 +18,7 @@ body {
   color: var(--ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   letter-spacing: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -42,6 +43,7 @@ a:hover {
 .brand {
   color: var(--ink);
   font-weight: 900;
+  overflow-wrap: anywhere;
 }
 
 .nav {
@@ -67,6 +69,7 @@ h1 {
   margin: 0 0 18px;
   font-size: 3.2rem;
   line-height: 1.02;
+  overflow-wrap: anywhere;
 }
 
 html[lang="zh-Hans"] h1 {
@@ -88,6 +91,7 @@ html[lang="zh-Hans"] .callout {
   color: var(--muted);
   font-size: 1.22rem;
   line-height: 1.65;
+  overflow-wrap: anywhere;
 }
 
 .wrap {
@@ -114,6 +118,7 @@ li {
   color: #253044;
   font-size: 1.03rem;
   line-height: 1.78;
+  overflow-wrap: anywhere;
 }
 
 ul,
@@ -173,6 +178,7 @@ ol {
   border: 1px solid var(--line);
   border-radius: 8px;
   color: var(--ink);
+  overflow-wrap: anywhere;
 }
 
 .footer {
@@ -209,6 +215,7 @@ ol {
   .wrap {
     grid-template-columns: 1fr;
     gap: 26px;
+    width: min(760px, calc(100% - 40px));
     padding: 36px 0;
   }
 
