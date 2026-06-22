@@ -10,6 +10,8 @@ Launch/share kit: https://dewwjq.github.io/decision-clarity-kit/launch-kit.html
 
 Free browser tool: https://dewwjq.github.io/decision-clarity-kit/decision-reset-tool.html
 
+Buy page: https://dewwjq.github.io/decision-clarity-kit/buy.html
+
 Purchase request form: https://github.com/dewwjq/decision-clarity-kit/issues/new?template=purchase_request.yml
 
 ## Free Samples

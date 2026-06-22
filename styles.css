@@ -450,6 +450,101 @@ h2 {
   line-height: 1.55;
 }
 
+.buy-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 48px;
+  align-items: center;
+  min-height: 86vh;
+  padding: 64px 7vw 48px;
+  background: linear-gradient(180deg, #ffffff 0%, var(--soft) 100%);
+}
+
+.buy-copy {
+  min-width: 0;
+  max-width: 720px;
+}
+
+.price-panel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  max-width: 680px;
+  margin-top: 28px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.price {
+  display: block;
+  color: var(--green);
+  font-size: 3.6rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.price-note {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.price-panel p,
+.buy-card p,
+.step-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.buy-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.buy-card,
+.step-grid > div {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.buy-card {
+  padding: 24px;
+}
+
+.buy-card h2 + p {
+  margin-bottom: 24px;
+}
+
+.steps h2 {
+  margin-bottom: 28px;
+}
+
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.step-grid > div {
+  padding: 20px;
+}
+
+.step-grid strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.04rem;
+}
+
 @media (max-width: 860px) {
   html,
   body,
@@ -461,13 +556,15 @@ h2 {
   }
 
   .hero,
+  .buy-hero,
   .split {
     display: block;
     width: 100%;
     max-width: 100%;
   }
 
-  .hero {
+  .hero,
+  .buy-hero {
     width: 100vw;
     max-width: 100vw;
     min-height: auto;
@@ -476,7 +573,8 @@ h2 {
     overflow: hidden;
   }
 
-  .hero-copy {
+  .hero-copy,
+  .buy-copy {
     width: 100%;
     max-width: 100%;
   }
@@ -585,5 +683,12 @@ h2 {
 
   .upgrade-strip img {
     margin-bottom: 16px;
+  }
+
+  .buy-grid,
+  .step-grid,
+  .price-panel {
+    grid-template-columns: 1fr;
+    max-width: 300px;
   }
 }
