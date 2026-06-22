@@ -7,6 +7,13 @@
   "language": "en",
   "items": [
     {
+      "id": "https://github.com/dewwjq/decision-clarity-kit/issues/1",
+      "url": "https://github.com/dewwjq/decision-clarity-kit/issues/1",
+      "title": "Public Launch Issue",
+      "date_published": "2026-06-23T04:08:00+08:00",
+      "summary": "Public GitHub issue with product context, sample links, use cases, checkout status, and boundaries."
+    },
+    {
       "id": "https://dewwjq.github.io/decision-clarity-kit/buy.html",
       "url": "https://dewwjq.github.io/decision-clarity-kit/buy.html",
       "title": "Buy Decision Clarity Kit",

@@ -12,6 +12,8 @@ Free browser tool: https://dewwjq.github.io/decision-clarity-kit/decision-reset-
 
 Buy page: https://dewwjq.github.io/decision-clarity-kit/buy.html
 
+Public launch issue: https://github.com/dewwjq/decision-clarity-kit/issues/1
+
 AI/LLM summary: https://dewwjq.github.io/decision-clarity-kit/llms.txt
 
 Full AI/LLM reference: https://dewwjq.github.io/decision-clarity-kit/llms-full.txt
