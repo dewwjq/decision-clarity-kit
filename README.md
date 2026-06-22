@@ -53,6 +53,10 @@ The full kit is in prelaunch. It is prepared as a digital download with:
 - Decision journal template: https://dewwjq.github.io/decision-clarity-kit/resources/decision-journal-template.html
 - Premortem template: https://dewwjq.github.io/decision-clarity-kit/resources/premortem-template.html
 - Decision review template: https://dewwjq.github.io/decision-clarity-kit/resources/decision-review.html
+- Decision workbook for solo founders: https://dewwjq.github.io/decision-clarity-kit/use-cases/founder-decision-workbook.html
+- Decision workbook for managers: https://dewwjq.github.io/decision-clarity-kit/use-cases/manager-decision-workbook.html
+- Career decision workbook: https://dewwjq.github.io/decision-clarity-kit/use-cases/career-decision-workbook.html
+- Team decision log template: https://dewwjq.github.io/decision-clarity-kit/use-cases/team-decision-log.html
 - Chinese decision journal template: https://dewwjq.github.io/decision-clarity-kit/resources/decision-journal-template-zh.html
 - Chinese premortem template: https://dewwjq.github.io/decision-clarity-kit/resources/premortem-template-zh.html
 - Chinese decision review template: https://dewwjq.github.io/decision-clarity-kit/resources/decision-review-zh.html
