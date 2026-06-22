@@ -148,6 +148,10 @@ ol {
   padding: 18px;
 }
 
+.sidebar-card + .sidebar-card {
+  margin-top: 18px;
+}
+
 .sidebar-card h2 {
   margin-top: 0;
   font-size: 1.15rem;
@@ -164,6 +168,12 @@ ol {
   background: var(--ink);
   color: #ffffff;
   font-weight: 900;
+}
+
+.secondary-button {
+  border: 1px solid var(--line);
+  background: #ffffff;
+  color: var(--ink);
 }
 
 .resource-list {
