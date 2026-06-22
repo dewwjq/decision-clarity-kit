@@ -1,0 +1,45 @@
+name: Purchase request
+description: Request the $9 Decision Clarity Kit checkout link when it opens.
+title: "Purchase request: "
+labels: ["purchase-intent", "lead"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form if you want the full $9 Decision Clarity Kit when checkout opens. Do not include private, financial, medical, legal, or sensitive personal information.
+  - type: dropdown
+    id: language
+    attributes:
+      label: Which version do you want?
+      options:
+        - English
+        - Chinese
+        - Bilingual bundle
+    validations:
+      required: true
+  - type: dropdown
+    id: primary_format
+    attributes:
+      label: Most useful format
+      options:
+        - Printable PDF
+        - Markdown templates
+        - Local tracker
+        - Full bundle
+    validations:
+      required: true
+  - type: input
+    id: use_case
+    attributes:
+      label: What decision will you use it for?
+      description: Keep this general. Do not include sensitive details.
+      placeholder: "Example: choosing between two project directions"
+    validations:
+      required: true
+  - type: checkboxes
+    id: intent
+    attributes:
+      label: Purchase intent
+      options:
+        - label: I want the $9 checkout link when it opens.
+          required: true

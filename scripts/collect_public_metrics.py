@@ -13,6 +13,14 @@ REPO = os.environ.get("METRICS_REPO", "dewwjq/decision-clarity-kit")
 TAG = os.environ.get("METRICS_RELEASE_TAG", "sample-v0.1")
 OUTPUT = Path(os.environ.get("METRICS_OUTPUT", "metrics/daily.csv"))
 API_ROOT = "https://api.github.com"
+FIELDNAMES = [
+    "collected_at",
+    "release_tag",
+    "sample_en_downloads",
+    "sample_zh_downloads",
+    "early_access_issues",
+    "purchase_intent_issues",
+]
 
 
 def github_json(path):
@@ -47,6 +55,15 @@ def existing_rows(path):
         return list(csv.DictReader(handle))
 
 
+def write_rows(path, rows):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=FIELDNAMES)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({field: row.get(field, "") for field in FIELDNAMES})
+
+
 def main():
     release = find_release()
     assets = {asset["name"]: asset["download_count"] for asset in release.get("assets", [])}
@@ -56,22 +73,23 @@ def main():
         "sample_en_downloads": str(assets.get("decision-reset-sample-v0.1.zip", 0)),
         "sample_zh_downloads": str(assets.get("decision-reset-sample-zh-v0.1.zip", 0)),
         "early_access_issues": str(count_issues("early-access")),
+        "purchase_intent_issues": str(count_issues("purchase-intent")),
     }
 
     rows = existing_rows(OUTPUT)
     if rows:
         last = rows[-1]
-        comparable = ["sample_en_downloads", "sample_zh_downloads", "early_access_issues"]
+        comparable = ["sample_en_downloads", "sample_zh_downloads", "early_access_issues", "purchase_intent_issues"]
         if all(last.get(key) == row[key] for key in comparable):
+            if set(rows[0].keys()) != set(FIELDNAMES):
+                write_rows(OUTPUT, rows)
+                print(json.dumps({"status": "schema-updated", "row": row, "output": str(OUTPUT)}, indent=2))
+                return 0
             print(json.dumps({"status": "unchanged", "row": row}, indent=2))
             return 0
 
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    with OUTPUT.open("a", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(row.keys()))
-        if not rows:
-            writer.writeheader()
-        writer.writerow(row)
+    rows.append(row)
+    write_rows(OUTPUT, rows)
     print(json.dumps({"status": "appended", "row": row, "output": str(OUTPUT)}, indent=2))
     return 0
 
