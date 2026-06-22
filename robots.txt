@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://dewwjq.github.io/decision-clarity-kit/sitemap.xml
+LLMs: https://dewwjq.github.io/decision-clarity-kit/llms.txt

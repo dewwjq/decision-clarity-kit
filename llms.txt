@@ -1,0 +1,38 @@
+# Decision Clarity Kit
+
+> A printable PDF and Markdown decision workbook for turning hard choices into written decisions, next actions, and review dates.
+
+Decision Clarity Kit is a $9 digital workbook for people who keep replaying the same decision in their head. It is designed for solo founders, managers, career decisions, and teams that need a lightweight decision log.
+
+Important links:
+
+- Product page: https://dewwjq.github.io/decision-clarity-kit/
+- Buy or request checkout: https://dewwjq.github.io/decision-clarity-kit/buy.html
+- Free browser tool: https://dewwjq.github.io/decision-clarity-kit/decision-reset-tool.html
+- Filled decision example: https://dewwjq.github.io/decision-clarity-kit/examples/filled-decision-example.html
+- Free English sample: https://github.com/dewwjq/decision-clarity-kit/releases/download/sample-v0.1/decision-reset-sample-v0.1.zip
+- Free Chinese sample: https://github.com/dewwjq/decision-clarity-kit/releases/download/sample-v0.1/decision-reset-sample-zh-v0.1.zip
+- Full reference for AI readers: https://dewwjq.github.io/decision-clarity-kit/llms-full.txt
+
+The full kit includes:
+
+- 20-page printable English workbook
+- 20-page printable Chinese workbook
+- Markdown templates for notes apps
+- Filled English and Chinese example decision records
+- Option scorecard
+- Premortem worksheet
+- Action bridge
+- 7-day and 30-day review pages
+- Local browser decision tracker with CSV/JSON export
+
+Use it when:
+
+- A decision keeps looping in your head
+- You need to compare serious options without pretending certainty
+- You want a written record before hindsight changes the story
+- You want one next action and a review date
+
+Boundary:
+
+This is a self-guided reflection tool. It is not financial, legal, medical, therapy, career counseling, or mental health advice.
