@@ -7,6 +7,27 @@
   "language": "en",
   "items": [
     {
+      "id": "https://dewwjq.github.io/decision-clarity-kit/resources/decision-matrix-template.html",
+      "url": "https://dewwjq.github.io/decision-clarity-kit/resources/decision-matrix-template.html",
+      "title": "Decision Matrix Template",
+      "date_published": "2026-06-23T04:32:00+08:00",
+      "summary": "A copyable matrix for comparing options by impact, effort, risk, reversibility, confidence, and next action."
+    },
+    {
+      "id": "https://dewwjq.github.io/decision-clarity-kit/resources/go-no-go-decision-template.html",
+      "url": "https://dewwjq.github.io/decision-clarity-kit/resources/go-no-go-decision-template.html",
+      "title": "Go/No-Go Decision Template",
+      "date_published": "2026-06-23T04:31:00+08:00",
+      "summary": "A template for deciding whether to proceed, pause, or reduce risk before a threshold commitment."
+    },
+    {
+      "id": "https://dewwjq.github.io/decision-clarity-kit/resources/pros-and-cons-template.html",
+      "url": "https://dewwjq.github.io/decision-clarity-kit/resources/pros-and-cons-template.html",
+      "title": "Pros and Cons Template",
+      "date_published": "2026-06-23T04:30:00+08:00",
+      "summary": "A practical pros-and-cons structure that ends with a decision, risk, next action, and review date."
+    },
+    {
       "id": "https://github.com/dewwjq/decision-clarity-kit/issues/1",
       "url": "https://github.com/dewwjq/decision-clarity-kit/issues/1",
       "title": "Public Launch Issue",

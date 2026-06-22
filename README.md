@@ -65,6 +65,9 @@ The full kit is in prelaunch. It is prepared as a digital download with:
 - Decision journal template: https://dewwjq.github.io/decision-clarity-kit/resources/decision-journal-template.html
 - Premortem template: https://dewwjq.github.io/decision-clarity-kit/resources/premortem-template.html
 - Decision review template: https://dewwjq.github.io/decision-clarity-kit/resources/decision-review.html
+- Decision matrix template: https://dewwjq.github.io/decision-clarity-kit/resources/decision-matrix-template.html
+- Go/no-go decision template: https://dewwjq.github.io/decision-clarity-kit/resources/go-no-go-decision-template.html
+- Pros and cons template: https://dewwjq.github.io/decision-clarity-kit/resources/pros-and-cons-template.html
 - Filled decision example: https://dewwjq.github.io/decision-clarity-kit/examples/filled-decision-example.html
 - Decision workbook for solo founders: https://dewwjq.github.io/decision-clarity-kit/use-cases/founder-decision-workbook.html
 - Decision workbook for managers: https://dewwjq.github.io/decision-clarity-kit/use-cases/manager-decision-workbook.html

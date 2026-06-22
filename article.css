@@ -145,6 +145,31 @@ ol {
   padding: 20px;
 }
 
+.template-block {
+  margin: 24px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.template-block h2 {
+  margin: 0;
+  padding: 16px 18px 0;
+  font-size: 1.2rem;
+}
+
+.template-block pre {
+  margin: 0;
+  padding: 18px;
+  overflow-x: auto;
+  background: var(--soft);
+  color: #253044;
+  font: 0.92rem/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
 .sidebar {
   position: sticky;
   top: 18px;
