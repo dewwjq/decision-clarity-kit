@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://dewwjq.github.io/decision-clarity-kit/sitemap.xml
 LLMs: https://dewwjq.github.io/decision-clarity-kit/llms.txt
+Feed: https://dewwjq.github.io/decision-clarity-kit/feed.xml

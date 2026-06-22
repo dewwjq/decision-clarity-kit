@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Decision Clarity Kit</title>
+    <link>https://dewwjq.github.io/decision-clarity-kit/</link>
+    <description>Updates and resources for Decision Clarity Kit, a printable PDF and Markdown decision workbook.</description>
+    <language>en</language>
+    <lastBuildDate>Tue, 23 Jun 2026 04:00:00 +0800</lastBuildDate>
+    <item>
+      <title>Buy Decision Clarity Kit</title>
+      <link>https://dewwjq.github.io/decision-clarity-kit/buy.html</link>
+      <guid>https://dewwjq.github.io/decision-clarity-kit/buy.html</guid>
+      <pubDate>Tue, 23 Jun 2026 04:00:00 +0800</pubDate>
+      <description>The $9 digital workbook is prepared. Request checkout while the external payment page is being connected.</description>
+    </item>
+    <item>
+      <title>Free Decision Reset Tool</title>
+      <link>https://dewwjq.github.io/decision-clarity-kit/decision-reset-tool.html</link>
+      <guid>https://dewwjq.github.io/decision-clarity-kit/decision-reset-tool.html</guid>
+      <pubDate>Tue, 23 Jun 2026 03:30:00 +0800</pubDate>
+      <description>Use the browser-only tool to create a local Markdown decision record.</description>
+    </item>
+    <item>
+      <title>Filled Decision Example</title>
+      <link>https://dewwjq.github.io/decision-clarity-kit/examples/filled-decision-example.html</link>
+      <guid>https://dewwjq.github.io/decision-clarity-kit/examples/filled-decision-example.html</guid>
+      <pubDate>Tue, 23 Jun 2026 03:20:00 +0800</pubDate>
+      <description>See a vague decision loop turned into a structured decision record, risk, next action, and review date.</description>
+    </item>
+    <item>
+      <title>Decision Workbook for Solo Founders</title>
+      <link>https://dewwjq.github.io/decision-clarity-kit/use-cases/founder-decision-workbook.html</link>
+      <guid>https://dewwjq.github.io/decision-clarity-kit/use-cases/founder-decision-workbook.html</guid>
+      <pubDate>Tue, 23 Jun 2026 03:10:00 +0800</pubDate>
+      <description>A use case page for founder decisions about products, pricing, projects, and growth tests.</description>
+    </item>
+    <item>
+      <title>Team Decision Log Template</title>
+      <link>https://dewwjq.github.io/decision-clarity-kit/use-cases/team-decision-log.html</link>
+      <guid>https://dewwjq.github.io/decision-clarity-kit/use-cases/team-decision-log.html</guid>
+      <pubDate>Tue, 23 Jun 2026 03:05:00 +0800</pubDate>
+      <description>A lightweight decision log structure for recording context, owner, next action, and review date.</description>
+    </item>
+  </channel>
+</rss>

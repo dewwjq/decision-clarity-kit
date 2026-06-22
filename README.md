@@ -16,6 +16,10 @@ AI/LLM summary: https://dewwjq.github.io/decision-clarity-kit/llms.txt
 
 Full AI/LLM reference: https://dewwjq.github.io/decision-clarity-kit/llms-full.txt
 
+RSS feed: https://dewwjq.github.io/decision-clarity-kit/feed.xml
+
+JSON feed: https://dewwjq.github.io/decision-clarity-kit/feed.json
+
 Purchase request form: https://github.com/dewwjq/decision-clarity-kit/issues/new?template=purchase_request.yml
 
 ## Free Samples
