@@ -90,6 +90,7 @@
             </label>
 
             <div class="tool-actions">
+              <button type="button" id="load-example">Load Example</button>
               <button type="button" id="copy-markdown">Copy Markdown</button>
               <button type="button" id="download-markdown">Download .md</button>
               <button type="reset">Reset</button>
@@ -140,17 +141,49 @@
           .join("\n") || "- ";
       }
 
+      function sourceMarkdown() {
+        return [
+          "## Source",
+          "",
+          "Created with the free Decision Reset Tool: https://dewwjq.github.io/decision-clarity-kit/decision-reset-tool.html",
+          "",
+          "Full Decision Clarity Kit: https://dewwjq.github.io/decision-clarity-kit/buy.html"
+        ].join("\n");
+      }
+
       function markdown() {
         const today = new Date().toISOString().slice(0, 10);
-        return `# Decision Record\n\nDate: ${today}\n\n## Decision\n\n${value("decision") || ""}\n\n## Known Facts\n\n${bulletLines(value("facts"))}\n\n## Important Unknowns\n\n${bulletLines(value("unknowns"))}\n\n## Options\n\n${optionsMarkdown()}\n\n## Main Risk\n\n${value("risk") || ""}\n\n## Prevention Action\n\n${value("prevention") || ""}\n\n## Next Action\n\n${value("next-action") || ""}\n\n## Review Date\n\n${value("review-date") || ""}\n`;
+        return `# Decision Record\n\nDate: ${today}\n\n## Decision\n\n${value("decision") || ""}\n\n## Known Facts\n\n${bulletLines(value("facts"))}\n\n## Important Unknowns\n\n${bulletLines(value("unknowns"))}\n\n## Options\n\n${optionsMarkdown()}\n\n## Main Risk\n\n${value("risk") || ""}\n\n## Prevention Action\n\n${value("prevention") || ""}\n\n## Next Action\n\n${value("next-action") || ""}\n\n## Review Date\n\n${value("review-date") || ""}\n\n${sourceMarkdown()}\n`;
       }
 
       function render() {
         output.textContent = markdown();
       }
 
+      function setValue(id, text) {
+        document.querySelector("#" + id).value = text;
+      }
+
       ids.forEach((id) => document.querySelector("#" + id).addEventListener("input", render));
       form.addEventListener("reset", () => setTimeout(render, 0));
+
+      document.querySelector("#load-example").addEventListener("click", () => {
+        const reviewDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+        setValue("decision", "Should we launch the simple paid version this week?");
+        setValue("facts", "The free sample is live\nThe full kit files are ready\nThere is no paid checkout connected yet");
+        setValue("unknowns", "Whether visitors will request checkout\nWhich use case converts best\nWhether the sample explains enough value");
+        setValue("option-a", "Launch purchase request page now");
+        setValue("score-a", "4");
+        setValue("option-b", "Wait until checkout is connected");
+        setValue("score-b", "2");
+        setValue("option-c", "Create more free pages first");
+        setValue("score-c", "3");
+        setValue("risk", "People may see the product but leave because payment is not available yet.");
+        setValue("prevention", "Make the checkout status explicit and collect purchase intent with a short form.");
+        setValue("next-action", "Publish the buy page and review purchase-intent issues in 7 days.");
+        setValue("review-date", reviewDate);
+        render();
+      });
 
       document.querySelector("#copy-markdown").addEventListener("click", async () => {
         await navigator.clipboard.writeText(markdown());
